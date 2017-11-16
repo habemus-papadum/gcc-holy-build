@@ -1,0 +1,19 @@
+## Sadly -- building gcc on Travis takes more than 50 minutes -- This script will always fail
+## Trying to work around this by caching seems to miss the point
+
+language: cpp
+os:
+  - linux
+sudo: required
+services:
+  - docker
+
+before_install:
+  - mkdir build
+  - cd build
+  - export TRAVIS=true
+  - cmake ..
+  - cd ..
+script:
+  - cd build
+  - make
