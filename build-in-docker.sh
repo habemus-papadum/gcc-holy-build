@@ -22,21 +22,6 @@ if [ "${TRAVIS}" = true ]; then
         progress &
         progress_pid=$!
 fi
-(
-mkdir -p binutils-gdb-build
-cd binutils-gdb-build
-../binutils-gdb/configure          \
-    --prefix=${install_dir}        \
-    --disable-nls                  \
-    --disable-gdb                  \
-    --disable-libdecnumber         \
-    --disable-readline             \
-    --disable-sim                  \
-    --disable-werror
-
-make -j $num_procs > $redirect
-make install
-)
 
 (
 mkdir -p gcc-build
