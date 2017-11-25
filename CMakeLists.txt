@@ -64,8 +64,7 @@ configure_file(
 lil_chain_step(build-gcc main-chain)
 ## Download forks
 lil_retrieve_fork(gcc)
-lil_retrieve_fork(binutils-gdb)
-add_dependencies(gcc-download binutils-gdb-download)
+add_dependencies(gcc-download)
 
 ## using cmake EP infrastructure so that we can leverage its intelligent
 ## incremental build capabilities
