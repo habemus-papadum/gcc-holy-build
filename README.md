@@ -8,7 +8,7 @@ This repo provides a (reasonably) portable, relocatable `x86_64-pc-linux-gnu` `g
 ## Compatability 
 Will run on most `glibc` `x86_64` linux distros since 2007 cf. [Holy Build Box](https://github.com/phusion/holy-build-box#which-linux-distributions-do-binaries-compiled-with-holy-build-box-support)
 
-The [release](https://github.com/habemus-papadum/gcc-holy-build/releases) [tarball](https://github.com/habemus-papadum/gcc-holy-build/releases/download/v0.1.0/gcc-holy-build-habemus-papadum-v1-branch.tar.gz) can be extracted in any convenient location. 
+The [release](https://github.com/habemus-papadum/gcc-holy-build/releases) [tarball](https://github.com/habemus-papadum/gcc-holy-build/releases/download/v0.1.1/gcc-holy-build-habemus-papadum-v1-branch.tar.gz) can be extracted in any convenient location. 
 
 ## Motivation
 My preferred toolchain is a custom built [clang]().  This repo provides a known valid bootstrap compiler for this toolchain.  Having pre-made binaries reduces build times, also simplifying travis time limit issues.  
