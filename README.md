@@ -1,10 +1,9 @@
 ##
 
-This branch provides a (reasonably) portable, relocatable `x86_64-pc-linux-gnu` `gcc+binutils` which can be used to bootstrap builds of other tools. 
+This repo provides a (reasonably) portable, relocatable `x86_64-pc-linux-gnu` `gcc` which can be used to bootstrap builds of other tools. 
 
 ## Versions
  * `gcc-6_3_0` 
- * `binutils-2_28` 
 
 ## Compatability 
 Will run on most `glibc` `x86_64` linux distros since 2007 cf. [Holy Build Box](https://github.com/phusion/holy-build-box#which-linux-distributions-do-binaries-compiled-with-holy-build-box-support)
