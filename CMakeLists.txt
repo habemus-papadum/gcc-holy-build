@@ -8,8 +8,8 @@ project(gcc-holy-build)
 ## Github user for the forks of gcc and binutils                               #
 set(LIL_GH_USER habemus-papadum CACHE STRING "Github user")                    #
 ##                                                                             #
-## the tag to pull on the github forks                                         #
-set(LIL_TAG ${LIL_GH_USER}/v1-branch CACHE STRING "Github fork Versions")      #
+## the tag to pull on the github fork                                          #
+set(LIL_TAG ${LIL_GH_USER}/holy-build-0.1.0 CACHE STRING "Github fork version")#
 ##                                                                             #
 ## Docker image to use for holy building                                       #
 set(LIL_DOCKER_IMAGE "habemuspapadum/holy-gcc-builder:0.1.0" CACHE STRING      #
