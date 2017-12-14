@@ -39,7 +39,7 @@ if ($ENV{TRAVIS})
 endif()
 
 lil_find_program(tar)
-lil_find_program(docker)
+## broken lil_find_program(docker)
 
 string(REPLACE "/" "-" file_tag ${LIL_TAG})
 
@@ -72,8 +72,9 @@ lil_retrieve_fork(gcc)
 ################################################################################
 ExternalProject_Add_Step(gcc-download build-in-docker
         COMMAND
-        ${LIL_DOCKER}
+        docker
         run
+        -it
         --rm
         -v ${work_dir}:/work
         -v ${out_dir}:/opt/lilinjn/gcc-holy-build
@@ -82,7 +83,7 @@ ExternalProject_Add_Step(gcc-download build-in-docker
         /work/build-in-docker.sh $ENV{TRAVIS}
 
         WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-        COMMENT "Build binutils and gcc inside docker"
+        COMMENT "Build gcc inside docker"
 
         DEPENDEES install
         )
@@ -90,8 +91,9 @@ ExternalProject_Add_Step(gcc-download build-in-docker
 ################################################################################
 ExternalProject_Add_Step(gcc-download gcc-postfix
         COMMAND
-        ${LIL_DOCKER}
+        docker
         run
+        -it
         --rm
         -v ${work_dir}:/work
         -v ${out_dir}:/opt/lilinjn/gcc-holy-build
